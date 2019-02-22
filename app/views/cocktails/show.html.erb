@@ -2,8 +2,9 @@
 <h2>Ingredients</h2>
 <ul>
 <% @doses.each do |dose| %>
-  <li><%= dose.description %> of <%= dose.ingredient.name %> | <%= link_to "delete ingredient", dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to raw('<i class="fas fa-trash-alt"></i>'), dose_path(dose), method: :delete, data: { confirm: "Are you sure you want to remove the #{dose.ingredient.name}?" } %></li>
 <% end %>
 </ul>
-<%= link_to "add an ingredient", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "back to listing", cocktails_path %>
+<%= link_to raw('<i class="fas fa-plus-circle"></i> add an ingredient'), new_cocktail_dose_path(@cocktail) %><br>
+<br>
+<p class="h4"><%= link_to raw('<i class="fas fa-arrow-left"></i> all cocktails'), cocktails_path %></p>

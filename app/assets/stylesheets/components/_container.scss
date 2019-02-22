@@ -1,0 +1,10 @@
+.cb-styling {
+  color: $cb-header;
+  a {
+    color: $navbar-accent;
+  }
+  a:hover {
+    color: $navbar-title;
+    text-decoration: none;
+  }
+}show.

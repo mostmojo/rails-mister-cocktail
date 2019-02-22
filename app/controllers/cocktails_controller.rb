@@ -27,4 +27,3 @@ class CocktailsController < ApplicationController
     params.require(:cocktail).permit(:name, :photo)
   end
 end
-
