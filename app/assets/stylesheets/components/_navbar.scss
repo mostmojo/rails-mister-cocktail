@@ -1,33 +1,103 @@
-.navbar-lewagon {
+/* Colourscheme */
+$navbar-background: white;
+$navbar-title: black;
+$navbar-text: #616668;
+$navbar-accent: #da552f;
+
+
+/* Main navbar */
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: $navbar-background;
+  transition: all 0.3s ease;
+  height: 72px;
+  padding: 0px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
-  padding: 16px 24px;
+  a {
+    color: $navbar-text;
+  }
+  a:hover {
+    color: $navbar-accent;
+    text-decoration: none;
+  }
 }
 
-.navbar-lewagon .brand {
-  width: 40px;
+/* Logo */
+.navbar-wagon-brand h1 {
+  margin-top: 8px;
+  color: $navbar-accent;
+  small {
+    color: $navbar-title;
+  }
 }
 
-.navbar-lewagon .navbar-lewagon-actions {
+.navbar-wagon-brand h1:hover {
+  small {
+    color: $navbar-accent;
+  }
+}
+
+/* User Avatar */
+.navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-wagon-right {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link {
-  margin-left: 24px;
-  color: #999999;
-}
-.navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link:hover {
-  color: #151515;
-}
-
-
-.navbar-lewagon .navbar-lewagon-actions .avatar {
-  margin-left: 24px;
-}
-
-.navbar-lewagon .dropdown-toggle {
+/* Basic navbar item */
+.navbar-wagon-item {
   cursor: pointer;
+  padding: 0 20px;
 }
+
+/* Navbar link */
+.navbar-wagon-text {
+  color: $navbar-text;
+  font-size: 14px;
+}
+.navbar-wagon-text:hover {
+  color: $navbar-accent;
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+/*
+.navbar-wagon-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wagon-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wagon-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wagon-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: $navbar-background;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+*/

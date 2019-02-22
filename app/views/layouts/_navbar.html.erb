@@ -1,0 +1,16 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to raw('<h1><i class="fas fa-cocktail"></i><small>Cocktail Bootleggers</small></h1>'), root_path, class: "navbar-wagon-brand" %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to raw('<i class="fas fa-plus-square"></i> Add a Cocktail'), new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <%= link_to raw('<i class="fas fa-plus-square"></i>'), new_cocktail_path %>
+    </div>
+  </div>
+</div>
