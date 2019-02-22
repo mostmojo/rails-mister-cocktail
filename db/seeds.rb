@@ -29,10 +29,8 @@ end
 Cocktail.all.each do |cocktail|
   # get all the ingredient ids that are available (we'll need this later)
   ingredient_ids = Ingredient.pluck(:id)
-  
   # pick a random number of ingredients between 2-5
   number_of_ingredients = rand(3) + 2
-  
   # add that many doses
   number_of_ingredients.times do    
     # add a random measurement, also assign the cocktail and a random ingredient
