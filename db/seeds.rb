@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 require 'faker'
 
@@ -23,7 +16,7 @@ ingredients["drinks"].each do |ingredient|
 end
 
 # populate cocktails
-cocktails = Array.new(10) { Faker::Zelda.character }
+cocktails = Array.new(10) { Faker::Pokemon.name }
 photos = [
 "https://images.pexels.com/photos/237744/pexels-photo-237744.jpeg",
 "https://images.pexels.com/photos/34211/cocktail-summer-party-alcohol.jpg",
@@ -46,10 +39,8 @@ end
 Cocktail.all.each do |cocktail|
   # get all the ingredient ids that are available (we'll need this later)
   ingredient_ids = Ingredient.pluck(:id)
-  
   # pick a random number of ingredients between 2-5
   number_of_ingredients = rand(3) + 2
-  
   # add that many doses
   number_of_ingredients.times do    
     # add a random measurement, also assign the cocktail and a random ingredient
