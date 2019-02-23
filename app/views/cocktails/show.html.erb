@@ -1,4 +1,7 @@
 <h1><%= @cocktail.name %></h1>
+<% if @cocktail.photo.present? %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<% end %>
 <h2>Ingredients</h2>
 <ul>
 <% @doses.each do |dose| %>
