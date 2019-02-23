@@ -1,9 +1,21 @@
-<% @cocktails.each do |cocktail|  %>
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>');">
-    <div class="card-description">
-      <h2><%= cocktail.name %></h2>
-      <p>doses?</p>
-    </div>
-    <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+<h1>Cocktails</h1>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail|  %>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>');">
+            <div class="card-description">
+              <h2><%= cocktail.name %></h2>
+              <ul>
+                <% cocktail.ingredients.each do |ingredient| %>
+                  <li><%= ingredient.name %></li> 
+                <% end %>
+              </ul>
+            </div>
+            <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+          </div>
+      </div>
+    <% end %>
   </div>
-<% end  %> 
+</div>
