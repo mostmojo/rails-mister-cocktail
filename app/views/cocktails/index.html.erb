@@ -1,8 +1,9 @@
-<%= cl_image_tag("cocktail1",
-      width: 200, height: 200, crop: :thumb, gravity: :face) %>
-<ul>
-  <% @cocktails.each do |cocktail|  %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end  %>
-</ul>
-
+<% @cocktails.each do |cocktail|  %>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>');">
+    <div class="card-description">
+      <h2><%= cocktail.name %></h2>
+      <p>doses?</p>
+    </div>
+    <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+  </div>
+<% end  %> 
